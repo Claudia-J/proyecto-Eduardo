@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SITE RESPONSIVE </title>
+
+    <link rel="icon" type="image/x-icon" href="./favicon.jpg">
+
+    <!-- FONTAWASOME CDN LINK-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- box icons links -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="'stylesheet'">
+
+    <!-- remix icons link-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Mystery+Quest&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rochester&family=Rubik+Iso&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+
+
+
+    <!-- SWIPER-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+
+    <!-- CUSTUMER CSS FILE LINKS-->
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <link rel="stylesheet" href="../CSS/lightbox.min.css">
+
+
+</head>
+
+<body>
+    <header class="logo">
+        <a href="#à" class="brand"> <img src="../assets/images/logo.gif" alt="Logo">Travel</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="../index.html" class="index">Home</a>
+                <a href="../views/Sobre.html" class="sobre">Sobre</a>
+                <a href="../views/Producto.html" class="producto">Galeria</a>
+                <a href="../views/Presupuesto.html" class="presu">Presupuesto</a>
+                <a href="../views/Contacto.html" class="contact">Contacto</a>
+
+            </div>
+        </div>
+
+    </header>
+    <section class="presupuesto">
+        <div class="title">
+            <h2> Presupuesto</h2>
+        </div>
+
+        <form id="formularioPresupuesto" novalidate>
+            <fieldset>
+                <legend>Datos de contacto</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required maxlength="15">
+                <div class="error-mensaje" id="error-nombre"></div>
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" required maxlength="40">
+                <div class="error-mensaje" id="error-apellidos"></div>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" required pattern="\d{9}">
+                <div class="error-mensaje" id="error-telefono"></div>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+                <div class="error-mensaje" id="error-email"></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalles del Presupuesto</legend>
+
+                <label for="producto">Producto:</label>
+                <select id="producto">
+                    <option value="100">Producto A - 100€</option>
+                    <option value="200">Producto B - 200€</option>
+                    <option value="300">Producto C - 300€</option>
+                </select>
+
+                <label for="plazo">Plazo de entrega (días):</label>
+                <input type="number" id="plazo" min="1" value="1">
+                <div class="error-mensaje" id="error-plazo"></div>
+                <small>Recargo por urgencia: 10% si el plazo es menor a 10 días.</small>
+
+                <fieldset>
+                    <legend>Extras:</legend><br>
+                    <label class="checkbox-label"><input type="checkbox" name="extra" class="extra" value="25"> Embalaje especial (+25€)</label><br>
+                    <label class="checkbox-label"><input type="checkbox" name="extra" class="extra" value="50"> Seguro adicional (+50€)</label><br>
+                    <label class="checkbox-label"><input type="checkbox" name="extra" class="extra" value="75"> Entrega urgente (+75€)</label><br>
+                </fieldset>
+
+                <label for="presupuestoFinal">Presupuesto total:</label><br>
+                <input type="text" id="presupuestoFinal" readonly value="0 €">
+            </fieldset>
+
+            <fieldset>
+                <legend>Condiciones y envío</legend>
+                <label class="checkbox-label"><input type="checkbox" id="condiciones" required> Acepto las condiciones de privacidad</label><br>
+                <div class="error-mensaje" id="error-condiciones"></div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Resetear</button>
+            </fieldset>
+        </form>
+
+
+
+    </section>
+
+
+
+
+ <!--Pie de página donde encontramos iconos y enlaces para páginas de redes sociales-->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/marildam.mark"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@dashurianukshuhetkurre9533"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footerBotton">
+            <p> Copyright &copy;2025: Done by Daniel</p>
+            <a href="https://www.bankofengland.co.uk/legal"><i class=""> legal</i></a> and <a
+                href="https://www.bankofengland.co.uk/legal/privacy"><i class=""> privacy</i></a>
+
+        </div>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!--- COSTUMER JS FILE  LINKS-->
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../JS/lightbox-plus-jquery.min.js"></script>
+
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>
